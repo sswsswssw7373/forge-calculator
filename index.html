@@ -1,0 +1,502 @@
+                <tbody>
+                    <tr>
+                        <td class="equipment-name">
+                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSEhIVFhUXGBcXGBgYGBcVGBcYFRcXFxcYGBcYHSggGBolGxcXITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJEAwQMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQMGAAECBwj/xAA+EAABAwMCBAQDBwMDAgcAAAABAAIRAwQhEjEFQVFhBhMicYGRobEjMkKxwdHwB+Hx4hQzUmJygpKiwhYkQ1Nz/8QAGgEAAgMBAQAAAAAAAAAAAAAAAQIDBQQABv/EAC8RAAICAQMCBAQGAwEAAAAAAAABAgMRBBIhMUEFE1FhkXGBoeFCscHR8CIyscL/2gAMAwEAAhEDEQA/APcUIgVW2grcQrQEI5ZNMfSkzY6qlJzfpbRSS/MvqTd1jyoLpwOlylOqhOLWd8+6FUvs0RJ7sGqVQdkgNUkkgknoYJ+iiuKQaFUO1jONgLfYtBGOlWgw5pbymEOHhqRU1ZotrpxwDbSP7Hcex5fUKw2twx/DKSJ4KHCad7cg6aQbV5jHPb/5dPcJRYVnUqjXtz4Kh6aUWZw5k7lbrFQrI1JfmVL9m6U1b6JVo3wW+F8gg0Y2wrM43uLczITuY3JrnNDdO2ysZ+62Uu6Zy4xqOSE3dqANOhUezqEAgzlGF4AyrKGZ45M5HG8SCWQB4/xPjU2SsxpyQtGASSCRtkdDCCdRa5wOyXXNEhb85xdGvjppgtwSGn8sSE0r7DgrEHJHhkIJL3UEKKzuCXkGOaqvh3xfaXd4aFOu3Wco5HCd6fVFsVYKNwW9RBnGEiJUnPu5BdZpVdZ8s5bLRRGaZaQUvCMLa0uVhKwYhSfwHnqyoQP2X//Z" alt="갑옷" class="equipment-icon">갑옷
+                        </td>
+                        <td><input type="number" class="stage-input eternal" id="armor_eternal" min="0" max="10" value="0"></td>
+                        <td><input type="number" class="stage-input destruction" id="armor_destruction" min="0" max="10" value="0"></td>
+                        <td><input type="number" class="stage-input chaos" id="armor_chaos" min="0" max="10" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipment-name">
+                            <img src="data:image/jpeg;base64,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<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주조 계산기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            min-height: 100vh;
+            padding: 10px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .input-section {
+            margin-bottom: 30px;
+        }
+        
+        .equipment-group {
+            margin-bottom: 25px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .equipment-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #495057;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .equipment-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr 2fr;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .equipment-row:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .equipment-name {
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .input-label {
+            font-size: 12px;
+            color: #6c757d;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        
+        .stage-input {
+            padding: 8px;
+            border: 2px solid #e9ecef;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 60px;
+            margin: 0 auto;
+        }
+        
+        .stage-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+        
+        .stage-input.eternal { border-color: #28a745; }
+        .stage-input.destruction { border-color: #dc3545; }
+        .stage-input.chaos { border-color: #fd7e14; }
+        
+        .results-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+        }
+        
+        .results-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #495057;
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .results-table th {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .results-table td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+            font-weight: bold;
+        }
+        
+        .results-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .results-table tr:hover {
+            background: #e3f2fd;
+            transform: scale(1.01);
+            transition: all 0.3s ease;
+        }
+        
+        .set-eternal { color: #28a745; }
+        .set-destruction { color: #dc3545; }
+        .set-chaos { color: #fd7e14; }
+        
+        .calculate-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .input-table {
+                font-size: 14px;
+            }
+            
+            .input-table th, .input-table td {
+                padding: 10px 5px;
+            }
+            
+            .equipment-name {
+                font-size: 14px;
+                padding-left: 10px;
+            }
+            
+            .stage-input {
+                width: 50px;
+                font-size: 14px;
+                padding: 8px;
+            }
+            
+            .results-table {
+                font-size: 12px;
+            }
+            
+            .results-table th, .results-table td {
+                padding: 8px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">🔥 주조 계산기 🔥</h1>
+        
+        <div class="input-section">
+            <div class="equipment-group">
+                <div class="equipment-title">⚔️ 무기</div>
+                <div class="equipment-row">
+                    <div class="equipment-name">무기</div>
+                    <div class="input-group">
+                        <div class="input-label">영원</div>
+                        <input type="number" class="stage-input eternal" id="weapon_eternal" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">파괴</div>
+                        <input type="number" class="stage-input destruction" id="weapon_destruction" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">혼돈</div>
+                        <input type="number" class="stage-input chaos" id="weapon_chaos" min="0" max="10" value="0">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="equipment-group">
+                <div class="equipment-title">📿 목걸이</div>
+                <div class="equipment-row">
+                    <div class="equipment-name">목걸이</div>
+                    <div class="input-group">
+                        <div class="input-label">영원</div>
+                        <input type="number" class="stage-input eternal" id="necklace_eternal" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">파괴</div>
+                        <input type="number" class="stage-input destruction" id="necklace_destruction" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">혼돈</div>
+                        <input type="number" class="stage-input chaos" id="necklace_chaos" min="0" max="10" value="0">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="equipment-group">
+                <div class="equipment-title">🧤 장갑</div>
+                <div class="equipment-row">
+                    <div class="equipment-name">장갑</div>
+                    <div class="input-group">
+                        <div class="input-label">영원</div>
+                        <input type="number" class="stage-input eternal" id="gloves_eternal" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">파괴</div>
+                        <input type="number" class="stage-input destruction" id="gloves_destruction" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">혼돈</div>
+                        <input type="number" class="stage-input chaos" id="gloves_chaos" min="0" max="10" value="0">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="equipment-group">
+                <div class="equipment-title">🛡️ 갑옷</div>
+                <div class="equipment-row">
+                    <div class="equipment-name">갑옷</div>
+                    <div class="input-group">
+                        <div class="input-label">영원</div>
+                        <input type="number" class="stage-input eternal" id="armor_eternal" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">파괴</div>
+                        <input type="number" class="stage-input destruction" id="armor_destruction" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">혼돈</div>
+                        <input type="number" class="stage-input chaos" id="armor_chaos" min="0" max="10" value="0">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="equipment-group">
+                <div class="equipment-title">⚡ 벨트</div>
+                <div class="equipment-row">
+                    <div class="equipment-name">벨트</div>
+                    <div class="input-group">
+                        <div class="input-label">영원</div>
+                        <input type="number" class="stage-input eternal" id="belt_eternal" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">파괴</div>
+                        <input type="number" class="stage-input destruction" id="belt_destruction" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">혼돈</div>
+                        <input type="number" class="stage-input chaos" id="belt_chaos" min="0" max="10" value="0">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="equipment-group">
+                <div class="equipment-title">👟 신발</div>
+                <div class="equipment-row">
+                    <div class="equipment-name">신발</div>
+                    <div class="input-group">
+                        <div class="input-label">영원</div>
+                        <input type="number" class="stage-input eternal" id="shoes_eternal" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">파괴</div>
+                        <input type="number" class="stage-input destruction" id="shoes_destruction" min="0" max="10" value="0">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-label">혼돈</div>
+                        <input type="number" class="stage-input chaos" id="shoes_chaos" min="0" max="10" value="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="calculate-btn" onclick="calculate()">🔥 계산하기 🔥</button>
+        
+        <div class="results-section">
+            <div class="results-title">📊 요약 집계</div>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>세트</th>
+                        <th>총류 (S돌)</th>
+                        <th>무기</th>
+                        <th>목걸이</th>
+                        <th>장갑</th>
+                        <th>갑옷</th>
+                        <th>벨트</th>
+                        <th>신발</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="set-eternal">영원</td>
+                        <td id="eternal_stones">0</td>
+                        <td id="eternal_weapon">0</td>
+                        <td id="eternal_necklace">0</td>
+                        <td id="eternal_gloves">0</td>
+                        <td id="eternal_armor">0</td>
+                        <td id="eternal_belt">0</td>
+                        <td id="eternal_shoes">0</td>
+                    </tr>
+                    <tr>
+                        <td class="set-destruction">파괴</td>
+                        <td id="destruction_stones">0</td>
+                        <td id="destruction_weapon">0</td>
+                        <td id="destruction_necklace">0</td>
+                        <td id="destruction_gloves">0</td>
+                        <td id="destruction_armor">0</td>
+                        <td id="destruction_belt">0</td>
+                        <td id="destruction_shoes">0</td>
+                    </tr>
+                    <tr>
+                        <td class="set-chaos">혼돈</td>
+                        <td id="chaos_stones">0</td>
+                        <td id="chaos_weapon">0</td>
+                        <td id="chaos_necklace">0</td>
+                        <td id="chaos_gloves">0</td>
+                        <td id="chaos_armor">0</td>
+                        <td id="chaos_belt">0</td>
+                        <td id="chaos_shoes">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // 주조 단계별 필요 재료 데이터
+        const forgeData = {
+            0: { s_equipment: 0, growth: 0, s_stones: 0 },
+            1: { s_equipment: 1, growth: 1, s_stones: 20 },
+            2: { s_equipment: 2, growth: 3, s_stones: 40 },
+            3: { s_equipment: 3, growth: 6, s_stones: 90 },
+            4: { s_equipment: 4, growth: 9, s_stones: 140 },
+            5: { s_equipment: 6, growth: 13, s_stones: 240 },
+            6: { s_equipment: 8, growth: 17, s_stones: 340 },
+            7: { s_equipment: 11, growth: 23, s_stones: 490 },
+            8: { s_equipment: 14, growth: 29, s_stones: 640 },
+            9: { s_equipment: 17, growth: 37, s_stones: 840 },
+            10: { s_equipment: 20, growth: 45, s_stones: 1040 }
+        };
+
+        function calculate() {
+            const sets = ['eternal', 'destruction', 'chaos'];
+            const equipments = ['weapon', 'necklace', 'gloves', 'armor', 'belt', 'shoes'];
+            
+            sets.forEach(set => {
+                let totalStones = 0;
+                
+                equipments.forEach(equipment => {
+                    const inputId = `${equipment}_${set}`;
+                    const stage = parseInt(document.getElementById(inputId).value) || 0;
+                    
+                    // S장비 개수 계산 및 표시
+                    const sEquipment = forgeData[stage].s_equipment;
+                    document.getElementById(`${set}_${equipment}`).textContent = sEquipment;
+                    
+                    // S돌 누적
+                    totalStones += forgeData[stage].s_stones;
+                });
+                
+                // 총 S돌 표시
+                document.getElementById(`${set}_stones`).textContent = totalStones;
+            });
+        }
+
+        // 페이지 로드 시 초기 계산
+        window.onload = function() {
+            calculate();
+        };
+
+        // 혼돈 값에 따른 자동 입력 규칙
+        const chaosRules = {
+            1: { eternal: 1, destruction: 2 },
+            2: { eternal: 1, destruction: 2 },
+            3: { eternal: 1, destruction: 2 },
+            4: { eternal: 2, destruction: 2 },
+            5: { eternal: 3, destruction: 2 },
+            6: { eternal: 3, destruction: 3 },
+            7: { eternal: 3, destruction: 4 },
+            8: { eternal: 4, destruction: 4 },
+            9: { eternal: 5, destruction: 4 },
+            10: { eternal: 5, destruction: 5 }
+        };
+
+        // 혼돈 입력값 변경 시 자동 입력 처리
+        function handleChaosInput(equipment, chaosValue) {
+            if (chaosValue >= 1 && chaosValue <= 10 && chaosRules[chaosValue]) {
+                const rule = chaosRules[chaosValue];
+                
+                // 영원 자동 입력 (현재 값보다 작을 때만)
+                const eternalInput = document.getElementById(`${equipment}_eternal`);
+                const currentEternal = parseInt(eternalInput.value) || 0;
+                if (currentEternal < rule.eternal) {
+                    eternalInput.value = rule.eternal;
+                }
+                
+                // 파괴 자동 입력 (현재 값보다 작을 때만)
+                const destructionInput = document.getElementById(`${equipment}_destruction`);
+                const currentDestruction = parseInt(destructionInput.value) || 0;
+                if (currentDestruction < rule.destruction) {
+                    destructionInput.value = rule.destruction;
+                }
+            }
+        }
+
+        // 입력값 변경 시 자동 계산 및 혼돈 자동 입력 처리
+        document.addEventListener('input', function(e) {
+            if (e.target.classList.contains('stage-input')) {
+                // 혼돈 입력인 경우 자동 입력 처리
+                if (e.target.classList.contains('chaos')) {
+                    const inputId = e.target.id;
+                    const equipment = inputId.replace('_chaos', '');
+                    const chaosValue = parseInt(e.target.value) || 0;
+                    handleChaosInput(equipment, chaosValue);
+                }
+                
+                calculate();
+            }
+        });
+    </script>
+</body>
+</html>
