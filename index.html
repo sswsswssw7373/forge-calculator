@@ -2,15 +2,196 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>캠핑장 모음</title>
 <style>
-/* 이전에 쓰신 CSS 그대로 유지 */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f9f9f9;
+  color: #333;
+}
+
+h1 { text-align: center; margin-bottom: 20px; }
+
+.camp-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.camp {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.camp-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: background 0.3s;
+}
+
+.camp-btn:hover { background: #45a049; }
+
+.camp-desc {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.camp-info {
+  display: none;
+  margin-top: 10px;
+}
+
+.camp-info a,
+.camp-info button {
+  display: block;
+  margin: 5px auto;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 90%;
+  cursor: pointer;
+}
+
+.camp-info a {
+  background: #2196F3;
+  color: white;
+}
+
+.camp-info a:hover { background: #1976D2; }
+
+.camp-info button {
+  background: #FF9800;
+  color: white;
+  border: none;
+}
+
+.camp-info button:hover { background: #FB8C00; }
+
+/* 모달 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 80%;
+  overflow: auto;
+  text-align: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.close-btn {
+  margin-top: 10px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .camp { width: 100%; }
+}
 </style>
 </head>
 <body>
-<h1>캠핑장 모음</h1>
-<div class="camp-list" id="campList"></div>
 
+<h1>캠핑장 모음</h1>
+<div class="camp-list">
+  <!-- 캠핑장 A -->
+  <div class="camp">
+    <button class="camp-btn" onclick="toggleInfo(this)">캠핑장 A</button>
+    <p class="camp-desc">
+      푸른 숲 속에 위치한 조용한 캠핑장입니다.<br>
+      넓은 잔디밭과 깨끗한 화장실이 준비되어 있습니다.<br>
+      가족 단위 캠핑객에게 인기 있습니다.
+    </p>
+    <div class="camp-info">
+      <a href="https://example.com" target="_blank">사이트 접속</a>
+      <button onclick="openMap('map-a.jpg')">지도 보기</button>
+    </div>
+  </div>
+  <!-- 캠핑장 B -->
+  <div class="camp">
+    <button class="camp-btn" onclick="toggleInfo(this)">캠핑장 B</button>
+    <p class="camp-desc">
+      호수 옆ccccccccccc경을 감상할 수 있습니다.<br>
+      낚시와 물놀이를 즐기기에 최적의 장소입니다.<br>
+      주차장과 전기cc 시설이 완비되어 있습니다.
+    </p>
+    <div class="camp-info">
+      <a href="https://example.org" target="_blank">사이트 접속</a>
+      <button onclick="openMap('map-b.jpg')">지도 보기</button>
+    </div>
+  </div>
+</div>
+
+  <!-- 캠핑장 C -->
+  <div class="camp">
+    <button class="camp-btn" onclick="toggleInfo(this)">캠핑장 C</button>
+    <p class="camp-desc">
+      호수 옆에 자리 잡아 아름다운 풍경을 감상할 수 있습니다.<br>
+      낚시와 물놀이를 즐기기에 최적의 장소입니다.<br>
+      주차장과 전기 시설이 완비되어 있습니다.
+    </p>
+    <div class="camp-info">
+      <a href="https://example.org" target="_blank">사이트 접속</a>
+      <button onclick="openMap('map-b.jpg')">지도 보기</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- 캠핑장 D -->
+  <div class="camp">
+    <button class="camp-btn" onclick="toggleInfo(this)">캠핑장 D</button>
+    <p class="camp-desc">
+      dddd<br>
+      낚시와 ddd에 최적의 장소입니다.<br>
+      주차장과 전기 시dd비되어 있습니다.
+    </p>
+    <div class="camp-info">
+      <a href="https://example.org" target="_blank">사이트 접속</a>
+      <button onclick="openMap('map-b.jpg')">지도 보기</button>
+    </div>
+  </div>
+</div>
 <!-- 지도 모달 -->
 <div id="mapModal" class="modal">
   <div class="modal-content">
@@ -21,33 +202,8 @@
 </div>
 
 <script>
-// JSON 불러오기
-async function loadCamps() {
-  const response = await fetch("camps.json");
-  const camps = await response.json();
-  renderCamps(camps);
-}
-
-function renderCamps(camps) {
-  const list = document.getElementById("campList");
-  list.innerHTML = "";
-  camps.forEach(camp => {
-    const campDiv = document.createElement("div");
-    campDiv.className = "camp";
-    campDiv.innerHTML = `
-      <button class="camp-btn" onclick="toggleInfo(this)">${camp.name}</button>
-      <p class="camp-desc">${camp.desc}</p>
-      <div class="camp-info">
-        <a href="${camp.link}" target="_blank">사이트 접속</a>
-        <button onclick="openMap('${camp.map}')">지도 보기</button>
-      </div>
-    `;
-    list.appendChild(campDiv);
-  });
-}
-
 function toggleInfo(button) {
-  const info = button.nextElementSibling.nextElementSibling;
+  const info = button.nextElementSibling.nextElementSibling; // 설명 다음 요소가 camp-info
   info.style.display = (info.style.display === "block") ? "none" : "block";
 }
 
@@ -59,9 +215,7 @@ function openMap(imgSrc) {
 function closeMap() {
   document.getElementById("mapModal").style.display = "none";
 }
-
-// 실행
-loadCamps();
 </script>
+
 </body>
 </html>
